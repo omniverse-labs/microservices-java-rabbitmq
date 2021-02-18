@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  tokens:
+    image: tokens
+    container_name: tokens_test
+    ports:
+     - "8025:8080"
+
+  rabbitMq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq_dev
+    ports:
+     - "5672:5672"

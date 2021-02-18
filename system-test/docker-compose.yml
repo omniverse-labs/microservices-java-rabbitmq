@@ -1,0 +1,24 @@
+version: '3'
+services:
+
+  rabbitMq:
+    image: rabbitmq
+    container_name: rabbitMq_container
+
+  payments:
+    image: payments
+    container_name: payments
+    ports:
+     - "8010:8080"
+
+  tokens:
+    image: tokens
+    container_name: tokens
+    ports:
+     - "8020:8080"
+
+  accounts:
+    image: accounts
+    container_name: accounts
+    ports:
+     - "8030:8080"

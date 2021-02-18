@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  payments:
+    image: payments
+    container_name: payments_test
+    ports:
+     - "8005:8080"
+
+  rabbitMq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq_dev
+    ports:
+     - "5672:5672"
